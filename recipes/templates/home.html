@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Cook better{% endblock %}
+
+{% block content %}
+
+            <div class="col-lg-12">
+                <h1 class="page-header">Recipes</h1>
+            </div>
+
+  {% if recipes %}
+    {% for recipe in recipes %}
+            <div style="text-align: center;" class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a style="color: black" class="thumbnail" href="{{ recipe.id }}">{{ recipe.title }}</a>
+                <a class="thumbnail" href="#">
+			<img class="img-responsive" src="{{ recipe.image.url }}" alt="">
+                </a>
+            </div>
+    {% endfor %}
+
+  {% else %}
+    <p>Add some recipes!!!</p>
+  {% endif %}
+
+{% endblock %}

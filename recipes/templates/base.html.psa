@@ -1,0 +1,11 @@
+<html>
+  <head>
+    <title>{% block head_title %}Cook Better{% endblock %}</title>
+  </head>
+  <body>
+    <h1>{% block title %}Cook Better{% endblock %}</h1>
+    {% block content %}
+
+    {% endblock %}
+  </body>
+</html>
